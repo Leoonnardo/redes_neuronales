@@ -8,14 +8,14 @@ import random
 class index(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("view.ui", self)
+        uic.loadUi("RedesNeuronales/view.ui", self)
         opcion = False
         self.botonIngresar.clicked.connect(self.option1)
         self.aleatorio.clicked.connect(self.option2)
     
     def generarWs(self):
         listWs = []
-        for i in range(6):
+        for i in range(3):
             ws = round(random.uniform(-1, 1), 4)
             listWs.append(ws)
         return listWs
